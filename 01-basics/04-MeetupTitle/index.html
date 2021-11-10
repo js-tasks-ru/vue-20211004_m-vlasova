@@ -7,10 +7,14 @@
   <body>
     <div id="app">
       <div >
-          <label v-for="(item, index) in 5"><input type="radio" v-bind:id="item-1" v-bind:value="item" v-model="picked" />{{ item }}</label>
-        <hr />
+          <label v-for="(item, index) in 5">
+            <input type="radio" v-bind:id="item-1" v-bind:value="item" v-model="picked" />
+            {{ item }}
+          </label>
+        <hr/>
 
         <h3>{{ meetups.title }}</h3>
+        <h3>{{ currentMeetup }}</h3>
       </div>
     </div>
 
