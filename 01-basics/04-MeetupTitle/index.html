@@ -6,16 +6,15 @@
   </head>
   <body>
     <div id="app">
-      <div>
-        <label><input type="radio" value="1" /> 1</label>
-        <label><input type="radio" value="2" /> 2</label>
-        <label><input type="radio" value="3" /> 3</label>
-        <label><input type="radio" value="4" /> 4</label>
-        <label><input type="radio" value="5" /> 5</label>
+      <div >
+          <label v-for="(item, index) in 5">
+            <input type="radio" v-bind:id="item-1" v-bind:value="item" v-model="picked" />
+            {{ item }}
+          </label>
+        <hr/>
 
-        <hr />
-
-        <h3>MEETUP_TITLE</h3>
+        <h3>{{ meetups.title }}</h3>
+        <h3>{{ currentMeetup }}</h3>
       </div>
     </div>
 

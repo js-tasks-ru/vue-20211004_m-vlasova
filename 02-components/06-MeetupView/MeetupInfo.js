@@ -28,10 +28,6 @@ export default defineComponent({
         year: 'numeric',
       });
     },
-
-    VDate(){
-      return new Date(this.date).toISOString().slice(0, 10);
-    }
   },
   template: `
     <ul class="meetup-info">
@@ -45,7 +41,7 @@ export default defineComponent({
       </li>
       <li>
         <img class="icon meetup-info__icon" alt="icon" src="/assets/icons/icon-cal-lg.svg" />
-        <time :datetime="VDate">{{ localString }}</time>
+        <time datetime="2020-01-01">{{ localString }}</time>
       </li>
     </ul>`,
 });
